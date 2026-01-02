@@ -1,9 +1,10 @@
 import React from 'react'
+import cloudy from "../assets/cloudy.png"
 
 const Logo = () => {
   return (
-    <div className='h-30 w-30 bg-[url("https://cdn-icons-png.flaticon.com/128/1163/1163661.png")] rounded-4xl bg-cover bg-center border-2 border-emerald-500'>
-        
+    <div className='logo w-fit'>
+        <img className='h-15 w-15 sm:h-20 sm:w-20 lg:h-25 lg:w-25 border-2 rounded-3xl border-emerald-500' src={cloudy} alt="" />
     </div>
   )
 }
