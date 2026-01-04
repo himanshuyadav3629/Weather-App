@@ -7,7 +7,7 @@ const Navbar = (props) => {
   return (
     <div className='Navbar flex items-center gap-5'>
         <Logo/>
-        <InputSearch start={props.start} />
+        <InputSearch start={props.start} week={props.week} />
     </div>
   )
 }

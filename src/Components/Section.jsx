@@ -9,6 +9,7 @@ const Section = () => {
     const apikey = "b74bfb63e08fa88e25e98634eb842f36"
 
     const [weatherData, setweatherData] = useState("")
+    const [forecast, setforecast] = useState("")
 
 
     async function cureentWeather(city="Mumbai"){
@@ -23,16 +24,21 @@ const Section = () => {
     },[])
     
 
- async function foreCast() {
+ async function foreCast(city="Mumbai") {
   try {
-    const response = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=Mumbai&units=metric&appid=${apikey}`);
+    const response = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apikey}`);
 
     const data = response.data;
     console.log(data); // contains list[] → 3-hourly forecasts
+    setforecast(data.list)
   } catch (err) {
     console.error("Error:", err.response ? err.response.data : err.message);
   }
 }
+useEffect(()=>{
+    foreCast()
+},[])
+
 
 
 
@@ -40,11 +46,11 @@ const Section = () => {
     return (
         <div className='min-h-screen lg:min-h-full xl:min-h-screen w-full bg-black text-white p-4 lg:p-6 xl:p-8 2xl:p-10 flex flex-col gap-8 lg:flex-row '>
             <div className='lg:w-2/3 ' >
-                <Navbar start={cureentWeather} />
+                <Navbar start={cureentWeather} week={foreCast} />
                 <Weather weatherData={weatherData} />
             </div>
             <div className='lg:w-1/3'>
-                <WeekCondition />
+                <WeekCondition forecast={forecast} />
             </div>
         </div>
     )
