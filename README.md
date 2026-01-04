@@ -1,16 +1,52 @@
-# React + Vite
+# Weather App 🌤️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully responsive **Weather App** built with **React**, **Tailwind CSS**, featuring **current weather** and a **7-day forecast** using the **OpenWeather API**. Weather conditions are visually represented using **lucide-react icons**.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- 🌍 Search weather for any city  
+- ☀️ Display **current weather** including temperature, wind, humidity, and conditions  
+- 📅 7-day forecast with daily temperature and conditions  
+- 🖼️ Condition icons for better visualization using **lucide-react**  
+- 📱 Fully responsive across **mobile, tablet, and desktop**  
+- 🔄 Handles missing or unknown conditions gracefully  
+- ⚡ Smooth UI with subtle hover effects and clean design  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Screenshots & Demo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Mobile View | Desktop View |
+|-------------|--------------|
+| ![Mobile view](image-1.png) | ![Desktop view](image.png)
+
+## Demo Video
+
+▶️ **Mobile Demo (Screen Recording)**  
+[Watch Mobile Demo](./public/mobilegif.mp4)
+
+💻 **Desktop Demo (Screen Recording)**  
+[Watch Desktop Demo](../../Videos/Captures/Desktop.mp4)
+
+
+---
+
+## Tech Stack
+
+- **Frontend:** React, Tailwind CSS  
+- **Icons:** lucide-react  
+- **API Requests:** Axios  
+- **API:** OpenWeather API (current weather + 7-day forecast)  
+- **Build Tools:** Vite / Create React App  
+- **Version Control:** Git + GitHub  
+
+---
+
+## Installation
+
+- Clone the repository:
+```bash
+git clone https://github.com/himanshuyadav3629/Weather-App.git
+cd weather-app
