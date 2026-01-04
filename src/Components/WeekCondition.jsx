@@ -6,7 +6,7 @@ const WeekCondition = (props) => {
   function renderDate(num){
     let date = new Date()
     date.setDate(date.getDate()+num)
-    console.log(date)
+    
 
     return date.toLocaleDateString("en-US",{
       month:"short",
@@ -17,9 +17,9 @@ const WeekCondition = (props) => {
   
   
   
-  console.log(props.forecast)
+  
   return (
-    <div className='w-full border-4 border-emerald-500 rounded-3xl p-5'>
+    <div className='w-full border-4 border-emerald-500 rounded-3xl p-5 backdrop-blur-lg pointer-events-none select-none'>
         <h3 className='sm:text-xl'>7 Days Conditions</h3>
         <br />
         <div className="alldays ">

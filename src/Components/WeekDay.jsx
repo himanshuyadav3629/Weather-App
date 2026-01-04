@@ -2,8 +2,7 @@ import React from 'react'
 import sun from "../assets/sun.png"
 
 const WeekDay = (props) => {
-  console.log(props.node)
-  console.log(props.Day)
+  
   
   return (
     <div className='flex items-center justify-between  sm:text-2xl mb-2'>

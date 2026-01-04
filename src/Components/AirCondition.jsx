@@ -4,7 +4,7 @@ import React from 'react'
 
 
 const AirCondition = (props) => {
-  console.log(props.val)
+  
   
   return (
     
